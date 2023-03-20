@@ -21,7 +21,7 @@ Directly from GitHub:
 ```bash
 cd $HOME
 git clone https://github.com/inab/mapoferri/vre_app_3dshaper.git
-cd vre_template_tool
+cd vre_app_3dshaper
 ```
 
 Create the Conda environment (attention to changing the paths accordingly):
