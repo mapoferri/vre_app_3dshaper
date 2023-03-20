@@ -1,15 +1,17 @@
-# VRE Tool Executor for GUILD
+# VRE Tool Executor for 3D Shaper
 
 [![Documentation Status](https://readthedocs.org/projects/vre-template-tool/badge/?version=latest)](https://vre-template-tool.readthedocs.io/en/latest/?badge=latest)
 
 Tool ready to run in the VRE matching the code in the [documentation](https://vre-template-tool.readthedocs.io/en/latest/?badge=latest).
 
-Starting from the template for a VRE Tool, this is the adaptation for the GUILD - DisGenet draft workflow - retrieval for Gene Disease associations and generation of a PPI prioritazed network based on the results.
+Starting from the template for a VRE Tool, this is the adaptation for the 3D Shaper - 3D Simulation Intervertebral Disc workflow. 
 
 ## Requirements
 
 - Python 3.6 or later
 - Conda env
+- PyTorch
+- PyTorch3D
 - [Git](https://git-scm.com/downloads)
 
 ## Installation
@@ -18,7 +20,7 @@ Directly from GitHub:
 
 ```bash
 cd $HOME
-git clone https://github.com/inab/mapoferri/guild_app_vre.git
+git clone https://github.com/inab/mapoferri/vre_app_3dshaper.git
 cd vre_template_tool
 ```
 
