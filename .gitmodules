@@ -1,0 +1,3 @@
+[submodule "biobb_3dshaper"]
+	path = biobb_3dshaper
+	url = https://github.com/mapoferri/biobb_3dshaper.git
