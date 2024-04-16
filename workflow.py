@@ -16,6 +16,7 @@ from biobb_common.tools import file_utils as fu
 
 
 def prep_output(destination, source):
+<<<<<<< HEAD
     #see if destination exists
     #we should be in vre_app_3dshaper/run000/step4
     wdir = PurePath(source).parents[3]
@@ -29,15 +30,39 @@ def prep_output(destination, source):
     print (source)
     # should be /home /home/vre_template_tool/run000/weights
     #in theory the source should be the weights dir 
+=======
+    #    wdir = PurePath(source).parents[2]
+    #if not os.path.isdir(wdir):
+    #    os.mkdir(wdir)
+    #print (wdir, source, destination)
+>>>>>>> 2852ad9c31e926f58c9dab501a4db78530e1b5a3
     #print (str(wdir)+'/'+destination)
     #file = str(source) +"/output_netScore"
     #prova = str(wdir)+'/'+destination
     #print (file)
+<<<<<<< HEAD
+=======
+    #shutil.copy(file, prova)
+    #if os.path.isfile(prova):
+    #    print ("File copied.")
+    #else:
+    #    print ("Some error.")
+    wdir = PurePath(source).parents[3]
+    #if weights dir not created, created it
+    weights_dir = os.path.join(wdir, destination)
+    if not os.path.isdir(weights_dir):
+        #os.mkdir(weights_dir)
+        print ('OK')
+    #print (wdir, source, destination)
+    print (wdir, weights_dir)
+    print (source)
+>>>>>>> 2852ad9c31e926f58c9dab501a4db78530e1b5a3
     shutil.copytree(source, weights_dir)
     if os.path.isdir(weights_dir):
         print ("File copied.")
     else:
         print ("Some error.")
+
 
 
 def main(args):
@@ -53,7 +78,11 @@ def main(args):
     global_log.info("step1_iteration: Running Simulation Model with PyTorch3D")
     parsesai.registration(**global_paths["step1_iteration"], properties=global_prop["step1_iteration"])
 
+<<<<<<< HEAD
     prep_output(args.output_mesh_path, global_paths["step4_call_guild"]["output_path"])
+=======
+    prep_output(args.output_mesh_path, global_paths["step1_iteration"]["output_mesh_path"])
+>>>>>>> 2852ad9c31e926f58c9dab501a4db78530e1b5a3
     elapsed_time = time.time() - start_time
     global_log.info('')
     global_log.info('')
@@ -72,6 +101,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Based on the official BioBB tutorial")
     parser.add_argument('--config', dest="config_path", required=True)
     parser.add_argument('--system', dest="system", required=False)
-    parser.add_argument('--output_mesh_path', dest='output_meshes', required=False)
+    parser.add_argument('--output_mesh_path', dest='output_mesh_path', required=False)
     args = parser.parse_args()
     main(args)
